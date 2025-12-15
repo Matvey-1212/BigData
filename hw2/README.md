@@ -5,7 +5,7 @@
 2) Создаем директорию для БД:
     - `docker exec -it hive-server mkdir -p /data/warehouse/analytics`
 
-3) Подключение к Hive по SQL:
+3) Подключение к Hive по SQL: (для формирования скринов в отчете было использовано подключение через DBeaver)
     - `docker exec -it hive-server beeline`
     - `!connect jdbc:hive2://localhost:10000`
 
