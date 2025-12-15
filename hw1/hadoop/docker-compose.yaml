@@ -1,0 +1,13 @@
+services:
+  master:
+    image: apache/hadoop:3.3.6
+    container_name: master
+    hostname: master
+    ports:
+      - "9870:9870"
+      - "8088:8088"
+      - "8020:8020"
+      - "8032:8032"
+    volumes:
+      - ./entrypoint.sh:/entrypoint.sh
+    command: ["/bin/bash", "/entrypoint.sh"]
